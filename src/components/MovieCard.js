@@ -14,7 +14,7 @@ const MovieCard = ({ movie, toggleFavorite, isFavorite }) => {
           {movieContent.img_url ? (
             <img
               src={movieContent.img_url}
-              className="w-full h-full object-cover rounded-lg text-black"
+              className="w-full h-full object-cover rounded-md text-black"
               alt={movie.movie}
             />
           ) : (

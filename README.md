@@ -1,68 +1,132 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# FlickPick - Your Ultimate Movie Companion
 
-## Available Scripts
+Welcome to FlickPick, a responsive React application designed to enhance your movie-watching experience. This project allows users to explore a vast collection of movies, mark their favorites, and easily navigate between a list of all movies and a list of their favorites.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Objective](#objective)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Data Scraping](#data-scraping)
+- [Folder Structure](#folder-structure)
+- [Contact](#contact)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Objective
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The objective of FlickPick is to create a user-friendly platform where users can:
 
-### `npm test`
+1. Browse and view a list of movies.
+2. Mark movies as favorites.
+3. View their favorite movies on a separate page.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **Movie List Page:** Displays a sorted list of movies fetched from an API, with options to mark/unmark favorites.
+- **Favorite Movies Page:** Displays a list of favorite movies in the order they were added.
+- **Responsive Design:** Ensures a seamless experience across desktop, tablet, and mobile devices.
+- **Smooth Navigation:** Provides easy navigation between the movie list and favorite movies pages.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Deployed Link:** _[Live Site URL](https://flick-pick-xi.vercel.app/)_
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run FlickPick on your local system, follow these steps:
 
-### `npm run eject`
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Sparsh47/movies-app.git
+   cd flickpick
+   ```
+2. **Install the dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add the following line:
+   ```bash
+   npm install
+   ```
+4. **Run the application:**
+   ```bash
+   npm start
+   ```
+5. **Open your browser:**
+   Go to http://localhost:3000 to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Movie List Page:** Browse the list of movies sorted by rating. Click the favorite icon to add/remove movies from your favorites list. Click on a movie card to visit its IMDb page.
+- **Favorite Movies Page:** View all the movies you have marked as favorites. The movies appear in the order they were added.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **React:** For building the user interface.
+- **Redux:** For state management.
+- **CSS (Tailwind CSS/Custom):** For responsive design.
+- **BeautifulSoup:** For scraping movie images from IMDb.
 
-## Learn More
+## Data Scraping
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Due to faulty image links in the provided API, BeautifulSoup was used to scrape movie images from the IMDb website. The scraped images, was stored in a movies.js file, which is used to populate the movie's images in the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Folder Structure
 
-### Code Splitting
+The folder structure of the project is as follows:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```bash
+movies-app/
+│
+├── public/
+│ ├── favicon.png
+│ ├── index.html
+│ ├── manifest.json
+│ └── robots.txt
+│
+├── src/
+│ ├── api/
+│ │ ├── movieApi.js
+│ │ └── movies.js
+│ │
+│ ├── components/
+│ │ ├── MovieCard.js
+│ │ └── Navbar.js
+│ │
+│ ├── pages/
+│ │ ├── FavoriteMovies.js
+│ │ └── MovieList.js
+│ │
+│ ├── redux/
+│ │ ├── slices/
+│ │ │ ├── favoriteSlice.js
+│ │ │ └── movieSlice.js
+│ │ └── store.js
+│ │
+│ ├── data/
+│ │ └── movies.js
+│ │
+│ ├── App.js
+│ ├── App.test.js
+│ ├── Layout.js
+│ ├── index.css
+│ ├── index.js
+│ └── setupTests.js
+│
+├── .env
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── postcss.config.json
+├── tailwind.config.json
+└── README.md
+```
 
-### Analyzing the Bundle Size
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+For any further clarification or issues, feel free to reach out:
 
-### Making a Progressive Web App
+- **[Sparsh Shandilya](https://www.linkedin.com/in/sparshshandilya/)**
+- **Email:** sparshshandilya123@gmail.com
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thank you for using FlickPick! Enjoy your movie-watching experience.
