@@ -30,6 +30,8 @@ The objective of FlickPick is to create a user-friendly platform where users can
 
 **Deployed Link:** _[Live Site URL](https://flick-pick-xi.vercel.app/)_
 
+**Demo Video Link:** [Demo Video](https://drive.google.com/file/d/113mIT4A9eb-YHjJVn8YwqTI7TK3nrznP/view?usp=sharing)
+
 ## Installation
 
 To run FlickPick on your local system, follow these steps:
